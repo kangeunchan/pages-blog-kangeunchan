@@ -8,19 +8,24 @@ layout: null
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for post in site.posts %}
     <url>
+        <!-- 필수 loc 태그: 페이지의 절대 URL -->
         <loc>{{ site.url }}{{ post.url }}</loc>
+
+        <!-- 마지막 수정 날짜 -->
         {% if post.lastmod == null %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         {% else %}
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
         {% endif %}
 
+        <!-- 페이지 변경 빈도 -->
         {% if post.sitemap.changefreq == null %}
         <changefreq>weekly</changefreq>
         {% else %}
         <changefreq>{{ post.sitemap.changefreq }}</changefreq>
         {% endif %}
 
+        <!-- 페이지 중요도 -->
         {% if post.sitemap.priority == null %}
         <priority>0.5</priority>
         {% else %}
