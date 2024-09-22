@@ -7,3 +7,6 @@ gem "jekyll-include-cache", group: :jekyll_plugins
 gem "jekyll-sitemap", group: :jekyll_plugins
 
 gem "html-proofer", "~> 5.0", :group => :development
+
+gem "jekyll-sitemap"
+gem "jekyll-seo-tag"
