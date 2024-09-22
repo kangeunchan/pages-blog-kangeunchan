@@ -14,8 +14,6 @@ layout: null
         <!-- lastmod 값이 없는 경우 기본 날짜를 사용하도록 처리 -->
         {% if post.date %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        {% else %}
-        <lastmod>{{ 'now' | date_to_xmlschema }}</lastmod> <!-- 기본값으로 현재 날짜 사용 -->
         {% endif %}
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -24,14 +22,12 @@ layout: null
 
     <!-- Pages -->
     {% for page in site.pages %}
-    {% unless page.url contains 'assets/' %}
+    {% unless page.url contains 'assets/' or page.url contains '404' or page.url contains 'sitemap.xml' %}
     <url>
         <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
-        <!-- lastmod 값이 없는 경우 기본 날짜를 사용하도록 처리 -->
+        <!-- lastmod 값이 있는 페이지에만 lastmod 태그 추가 -->
         {% if page.date %}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-        {% else %}
-        <lastmod>{{ 'now' | date_to_xmlschema }}</lastmod> <!-- 기본값으로 현재 날짜 사용 -->
         {% endif %}
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
