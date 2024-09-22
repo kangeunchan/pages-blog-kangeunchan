@@ -10,9 +10,9 @@ layout: null
     <!-- Posts -->
     {% for post in site.posts %}
     <url>
-        <!-- baseurl을 포함한 URL -->
         <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
-        <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+        <!-- lastmod 필터 수정 -->
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -20,12 +20,14 @@ layout: null
 
     <!-- Pages -->
     {% for page in site.pages %}
+    {% unless page.url contains 'assets/' %}
     <url>
-        <!-- baseurl을 포함한 URL -->
         <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
-        <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+        <!-- lastmod 필터 수정 -->
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
+    {% endunless %}
     {% endfor %}
 </urlset>
