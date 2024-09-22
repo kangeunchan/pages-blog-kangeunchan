@@ -11,8 +11,12 @@ layout: null
     {% for post in site.posts %}
     <url>
         <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
-        <!-- lastmod 필터 수정 -->
+        <!-- lastmod 값이 없는 경우 기본 날짜를 사용하도록 처리 -->
+        {% if post.date %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+        <lastmod>{{ 'now' | date_to_xmlschema }}</lastmod> <!-- 기본값으로 현재 날짜 사용 -->
+        {% endif %}
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -23,8 +27,12 @@ layout: null
     {% unless page.url contains 'assets/' %}
     <url>
         <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
-        <!-- lastmod 필터 수정 -->
+        <!-- lastmod 값이 없는 경우 기본 날짜를 사용하도록 처리 -->
+        {% if page.date %}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+        <lastmod>{{ 'now' | date_to_xmlschema }}</lastmod> <!-- 기본값으로 현재 날짜 사용 -->
+        {% endif %}
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
