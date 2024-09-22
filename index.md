@@ -14,6 +14,12 @@ permalink: /
 주로 **백엔드**와 **DevOps** 분야를 집중적으로 공부하고 있으며,  
 **깔끔하고 효율적인 코드**를 추구합니다.
 
+## 😜 간단한 자기 소개
+
+저는 **<a href="https://dsmhs.djsch.kr/main.do">대덕소프트웨어마이스터고등학교</a>** 10기 재학생인 강은찬 입니다.  
+
+> 시간과 정성을 들이지 않고 얻을 수 있는 결실은 없다.
+
 ## 📚 기술 스택
 
 <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; align-items: center;">
