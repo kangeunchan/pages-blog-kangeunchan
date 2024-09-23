@@ -1,7 +1,3 @@
----
-layout: table_wrappers
----
-
 <!DOCTYPE html>
 
 <html lang="{{ site.lang | default: 'en-US' }}">
@@ -28,7 +24,8 @@ layout: table_wrappers
             {{ content }}
           {% endif %}
 
-          {% if page.has_toc != false %}
+          <!-- 여기서 toc 제어 -->
+          {% if page.toc != false %}
             {% include components/children_nav.html %}
           {% endif %}
         </main>
