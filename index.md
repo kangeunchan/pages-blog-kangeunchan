@@ -58,4 +58,7 @@ permalink: /
 - Github : <a href="https://github.com/kangeunchan">https://github.com/kangeunchan</a>
 - Tistory : <a href="https://kang-eunchan.tistory.com/">https://kang-eunchan.tistory.com/</a>
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkangeunchan.github.io%2Fpages-blog-kangeunchan%2F&count_bg=%235B5B5B&title_bg=%23555555&icon=airbnb.svg&icon_color=%23E7E7E7&title=visit&edge_flat=false)](https://hits.seeyoufarm.com)
+<br>
+<div align="center">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkangeunchan.github.io%2Fpages-blog-kangeunchan%2F&count_bg=%235B5B5B&title_bg=%23555555&icon=airbnb.svg&icon_color=%23E7E7E7&title=visit&edge_flat=false">
+</div>
